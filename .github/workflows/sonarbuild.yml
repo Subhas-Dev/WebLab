@@ -43,6 +43,5 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"Subhas-Dev_WebLab" /o:"subhas-dev" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://www.sonarcloud.io"
-          dotnet build CSharp_Lab/CSharp_Lab.sln
-          #dotnet build WebLab.sln
+          dotnet build WebLab.sln
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
